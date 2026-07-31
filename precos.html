@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preços da NexChat — transparente, em reais, com IA inclusa</title>
+<meta name="description" content="Preço na tela, em reais, sem 'fale com o vendedor'. Todos os planos com Agente de IA incluso, API oficial da Meta e sem fidelidade. Calcule seu ROI.">
+<meta name="theme-color" content="#fdf6e9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23fdf6e9'/%3E%3Cpath d='M7 7l6 9-6 9M25 7l-6 9 6 9' stroke='%236624ff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+</head>
+<body data-page="precos">
+<div id="nav-root"></div>
+
+<main class="page-pad">
+
+<!-- ===================== HERO PREÇOS ===================== -->
+<section class="section" style="padding-bottom:clamp(1.5rem,3vw,2.5rem)">
+  <div class="container">
+    <div class="section-head center-head text-center" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Planos</span>
+      <h2 class="h2">Preço na cara. Em reais. Sem <span class="mark">"fale com o vendedor"</span>.</h2>
+      <p class="lead">Enquanto o mercado esconde o preço, a gente mostra. Todos os planos com <b>Agente de IA incluso</b>, API oficial da Meta e sem fidelidade.</p>
+    </div>
+    <div style="display:flex;justify-content:center">
+      <div class="toggle" role="tablist" aria-label="Periodicidade">
+        <button class="is-active" id="billMonthly" role="tab" aria-selected="true">Mensal</button>
+        <button id="billYearly" role="tab" aria-selected="false">Anual <span class="save">-20%</span></button>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan" data-reveal>
+        <div class="plan__name">Essencial</div>
+        <p class="plan__desc">Para começar a centralizar e não perder mais nenhum lead.</p>
+        <div class="plan__price"><span class="cur">R$</span><span class="amt" data-m="249" data-y="199">249</span><span class="per">/mês</span></div>
+        <div class="plan__meta" data-m="" data-y="cobrado anualmente">&nbsp;</div>
+        <a href="contato.html" class="btn btn--ghost btn--block">Testar grátis</a>
+        <ul class="plan__features">
+          <li class="ai"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Agente de IA incluso</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> WhatsApp API Oficial</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Até 3 atendentes</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Relatórios essenciais</li>
+        </ul>
+      </div>
+      <div class="plan plan--featured" data-reveal data-reveal-delay="1">
+        <span class="plan__flag">Mais escolhido</span>
+        <div class="plan__name">Pro</div>
+        <p class="plan__desc">O equilíbrio ideal para times que vendem pelo WhatsApp.</p>
+        <div class="plan__price"><span class="cur">R$</span><span class="amt" data-m="497" data-y="397">497</span><span class="per">/mês</span></div>
+        <div class="plan__meta" data-m="" data-y="cobrado anualmente">&nbsp;</div>
+        <a href="contato.html" class="btn btn--primary btn--block">Testar grátis 7 dias</a>
+        <ul class="plan__features">
+          <li class="ai"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Agente de IA + base de conhecimento</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Todos os canais + Instagram/Messenger</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Até 8 atendentes</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Distribuição automática + dashboard</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Automação de agendamento</li>
+        </ul>
+      </div>
+      <div class="plan" data-reveal data-reveal-delay="2">
+        <div class="plan__name">Business</div>
+        <p class="plan__desc">Para operações maiores que precisam de telefonia e escala.</p>
+        <div class="plan__price"><span class="cur">R$</span><span class="amt" data-m="897" data-y="717">897</span><span class="per">/mês</span></div>
+        <div class="plan__meta" data-m="" data-y="cobrado anualmente">&nbsp;</div>
+        <a href="contato.html" class="btn btn--ghost btn--block">Testar grátis</a>
+        <ul class="plan__features">
+          <li class="ai"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> IA com voz (áudio) + ações avançadas</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Telefonia / PABX integrada</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Até 15 atendentes</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Integrações (CRM, agenda, ERP)</li>
+        </ul>
+      </div>
+      <div class="plan" data-reveal data-reveal-delay="3">
+        <div class="plan__name">Enterprise</div>
+        <p class="plan__desc">Volume alto, múltiplas unidades e necessidades sob medida.</p>
+        <div class="plan__price"><span class="amt" style="font-size:var(--step-2)">Sob medida</span></div>
+        <div class="plan__meta">atendentes e canais ilimitados</div>
+        <a href="contato.html" class="btn btn--dark btn--block">Falar com especialista</a>
+        <ul class="plan__features">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Tudo do Business, sem limites</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Gerente de conta dedicado</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Onboarding e treinamento assistido</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> SLA e segurança avançada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="meta-cost" data-reveal>
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><h4>E o custo da Meta?</h4><p>Desde novembro de 2024, <b>conversas iniciadas pelo cliente e mensagens de atendimento são gratuitas</b> na API oficial. Você só paga a Meta por modelos de marketing enviados fora da janela de 24h — e a gente te mostra tudo, sem surpresa na conta.</p></div>
+    </div>
+    <p class="muted text-center" style="margin-top:2rem;font-size:var(--step--1)">Valores ilustrativos da estrutura de planos. Todos com teste grátis, sem cartão e sem fidelidade.</p>
+  </div>
+</section>
+
+<!-- ===================== ROI ===================== -->
+<section class="section section--cream2" id="roi">
+  <div class="container">
+    <div class="section-head center-head text-center" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Calculadora</span>
+      <h2 class="h2">Quanto você deixa <span class="mark">na mesa</span> todo mês?</h2>
+      <p class="lead">Mexa nos números do seu negócio e veja a estimativa de venda que some por demora no atendimento.</p>
+    </div>
+    <div class="roi__card" data-reveal>
+      <div class="roi__inputs">
+        <div class="roi__field"><label for="rLeads">Leads no WhatsApp por mês <span class="val" id="vLeads">300</span></label><input type="range" id="rLeads" min="50" max="2000" step="10" value="300"></div>
+        <div class="roi__field"><label for="rTicket">Ticket médio por venda <span class="val" id="vTicket">R$ 800</span></label><input type="range" id="rTicket" min="50" max="5000" step="50" value="800"></div>
+        <div class="roi__field"><label for="rConv">Sua conversão hoje <span class="val" id="vConv">10%</span></label><input type="range" id="rConv" min="1" max="40" step="1" value="10"></div>
+        <div class="roi__field"><label for="rLost">Leads que você perde por demora <span class="val" id="vLost">30%</span></label><input type="range" id="rLost" min="5" max="60" step="1" value="30"></div>
+      </div>
+      <div class="roi__result">
+        <span class="waves" aria-hidden="true"></span>
+        <span class="lbl">Você deixa de faturar cerca de</span>
+        <div class="roi__big" id="roiBig">R$ 7.200</div>
+        <p class="roi__sub">por mês — só de lead que não foi atendido a tempo.</p>
+        <div class="roi__break">
+          <div class="row"><span>Recuperando metade com resposta na hora</span><b id="roiRecover">+ R$ 3.600/mês</b></div>
+          <div class="row"><span>Em 12 meses</span><b id="roiYear">+ R$ 43.200</b></div>
+        </div>
+        <a href="contato.html" class="btn btn--mint btn--lg btn--block">Recuperar essa venda</a>
+        <p class="roi__disclaimer">Estimativa simplificada para ilustrar o impacto (leads perdidos × conversão × ticket). Os resultados reais variam conforme o seu negócio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="container faq__inner">
+    <div class="faq__aside">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="h2" style="margin-top:0.9rem">Tira a dúvida antes de decidir.</h2>
+      <p class="lead" style="margin-top:1rem">As perguntas que todo mundo faz antes de trocar de ferramenta — respondidas sem rodeio.</p>
+      <a href="#" class="btn btn--wa mt-2">Ainda tenho uma dúvida — WhatsApp</a>
+    </div>
+    <div class="faq__list">
+      <div class="qa"><button class="qa__q">Quanto custa de verdade? Tem custo escondido? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div>O preço do plano está na tela, em reais. Não tem taxa de setup escondida. O único custo à parte é o da Meta — e, desde nov/2024, <b>conversas iniciadas pelo cliente e mensagens de suporte são gratuitas</b>. Você só paga a Meta por templates de marketing fora da janela de 24h.</div></div></div>
+      <div class="qa"><button class="qa__q">Vou tomar bloqueio com vários atendentes no mesmo número? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div>Não. A NexChat opera na <b>API Oficial da Meta</b>, feita justamente para vários atendentes no mesmo número, sem clonar sessão nem violar os termos. É o caminho seguro.</div></div></div>
+      <div class="qa"><button class="qa__q">Qual a diferença de chatbot para agente de IA? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div>Chatbot de menu segue um script fixo e frustra quem foge do roteiro. O <b>agente de IA entende linguagem natural</b>, responde com a informação da sua empresa e executa ações (agenda, envia boleto). E você pode começar com um fluxo simples e ligar a IA quando quiser.</div></div></div>
+      <div class="qa"><button class="qa__q">A IA vai robotizar meu atendimento e afastar cliente? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div>Ao contrário. 73% dos brasileiros não se importam de falar com IA <b>desde que o problema seja resolvido</b>. A nossa IA resolve o simples na hora e <b>chama uma pessoa</b> quando o assunto pede — com todo o histórico.</div></div></div>
+      <div class="qa"><button class="qa__q">É difícil de configurar? Preciso de um programador? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div>Não. Você ativa em minutos, sem desenvolvedor, com <b>onboarding assistido</b>. Sobe seus materiais e a IA já começa a responder com a cara da sua empresa.</div></div></div>
+      <div class="qa"><button class="qa__q">E se eu não gostar? Tem fidelidade? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div><b>Sem contrato de fidelidade e sem multa.</b> Você testa grátis, e se decidir sair, sai. Suporte humano, em português, que responde em horas.</div></div></div>
+      <div class="qa"><button class="qa__q">Meus dados (e os dos meus clientes) estão seguros? <span class="qa__ico" aria-hidden="true"></span></button><div class="qa__a"><div>Sim. Operamos em conformidade com a <b>LGPD</b>, com o número e o histórico pertencendo à <b>sua empresa</b> — não ao celular do atendente.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="section cta-final">
+  <span class="waves" aria-hidden="true"></span>
+  <div class="container cta-final__inner" data-reveal>
+    <h2>Comece hoje, sem cartão e sem fidelidade.</h2>
+    <p>Ative o agente de IA e veja o resultado já na primeira semana.</p>
+    <div class="btn-row"><a href="contato.html" class="btn btn--primary btn--lg">Testar grátis 7 dias</a><a href="#" class="btn btn--dark btn--lg">Falar no WhatsApp</a></div>
+  </div>
+</section>
+
+</main>
+
+<div id="footer-root"></div>
+<div class="sticky-cta" id="stickyCta"><a href="#" class="btn btn--wa">Falar no WhatsApp</a><a href="contato.html" class="btn btn--primary">Testar grátis</a></div>
+<script src="script.js"></script>
+</body>
+</html>

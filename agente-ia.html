@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agente de IA da NexChat — atende, qualifica e vende no WhatsApp</title>
+<meta name="description" content="Não é robô de menu 1-2-3. O agente de IA da NexChat entende linguagem natural, puxa da sua base, executa ações (qualifica, agenda, envia boleto) e chama o humano na hora certa.">
+<meta name="theme-color" content="#fdf6e9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23fdf6e9'/%3E%3Cpath d='M7 7l6 9-6 9M25 7l-6 9 6 9' stroke='%236624ff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+</head>
+<body data-page="ia">
+<div id="nav-root"></div>
+<main class="page-pad">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <span class="eyebrow" data-reveal>O agente de IA</span>
+      <h2 class="h2" data-reveal data-reveal-delay="1" style="margin:0.9rem 0 1.3rem">Não é robô de menu <span style="opacity:.5">1-2-3</span>. É uma IA que <span class="mark">resolve de verdade</span>.</h2>
+      <p class="hero__sub" data-reveal data-reveal-delay="2">Ela entende linguagem natural, puxa a resposta da <b>sua base de conhecimento</b> e <b>executa a tarefa</b> — qualifica o lead, agenda a visita, envia o boleto. E chama uma pessoa na hora exata, sem deixar o cliente na mão.</p>
+      <div class="btn-row" data-reveal data-reveal-delay="3">
+        <a href="precos.html" class="btn btn--primary btn--lg"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="currentColor"/></svg> Testar grátis</a>
+        <a href="#" class="btn btn--ghost btn--lg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.06-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.15l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1112 20.2z"/></svg> Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="hero__demo" data-reveal style="position:relative">
+      <div aria-hidden="true" style="position:absolute;inset:-8% -4%;background:var(--mesh);filter:blur(34px);opacity:.5;border-radius:44px;z-index:-1"></div>
+      <div class="phone">
+        <span class="phone__notch" aria-hidden="true"></span>
+        <div class="phone__tag phone__tag--tl" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/></svg> Responde em <span class="n">&lt; 5s</span></div>
+        <div class="phone__tag phone__tag--br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Atende <span class="g">24/7</span></div>
+        <div class="phone__screen">
+          <div class="chat__top">
+            <span class="chat__avatar" aria-hidden="true"><svg viewBox="0 0 32 24" fill="none"><path d="M6 4l6 8-6 8M26 4l-6 8 6 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="chat__peer"><strong>Clínica Bella · IA</strong><span>agente de IA online</span></span>
+          </div>
+          <div class="chat__body" id="chatBody" aria-label="Demonstração do agente de IA conversando"></div>
+          <div class="chat__result" id="chatResult" hidden><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Lead qualificado e agendado — sem humano <span class="t">38s</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== O QUE A IA FAZ ===================== -->
+<section class="section">
+  <div class="container ai__inner">
+    <div>
+      <span class="eyebrow" data-reveal>IA agêntica</span>
+      <h2 class="h2" data-reveal data-reveal-delay="1" style="margin:0.9rem 0 0.5rem">Ela não só responde. Ela <span class="mark">resolve</span>.</h2>
+      <div class="ai-points">
+        <div class="ai-point" data-reveal><span class="ai-point__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a5 5 0 015 5v1a4 4 0 010 8H7a4 4 0 010-8V8a5 5 0 015-5z" stroke="currentColor" stroke-width="1.7"/><circle cx="9.5" cy="12" r="1" fill="currentColor"/><circle cx="14.5" cy="12" r="1" fill="currentColor"/></svg></span><div><h4>Entende e qualifica sozinho</h4><p>Conversa como gente, entende o que o cliente quer e separa o lead quente do curioso — sem formulário chato.</p></div></div>
+        <div class="ai-point" data-reveal data-reveal-delay="1"><span class="ai-point__ico"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9 15l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Executa ações, não só responde</h4><p>Agenda a visita, envia o boleto ou o link de pagamento, atualiza o cadastro. IA agêntica que faz — não só fala.</p></div></div>
+        <div class="ai-point" data-reveal data-reveal-delay="2"><span class="ai-point__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v5h5M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><div><h4>Aprende com a sua empresa</h4><p>Você sobe PDFs, tabela de preços e regras. Ela responde na sua voz, por texto ou áudio, com a informação certa.</p></div></div>
+      </div>
+    </div>
+
+    <div class="ai-demo" data-reveal>
+      <div class="ai-demo__tabs" role="tablist" aria-label="Modo de atendimento">
+        <button class="ai-tab" role="tab" aria-selected="false" data-panel="flow"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="14" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.7"/><path d="M7 10v3a2 2 0 002 2h5" stroke="currentColor" stroke-width="1.7"/></svg> Fluxo simples</button>
+        <button class="ai-tab" role="tab" aria-selected="true" data-panel="ai"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 3.9L18 8l-3 3 .7 4.4L12 13.6 8.3 15.4 9 11 6 8l4.2-1.1L12 3z" fill="currentColor"/></svg> Agente de IA</button>
+      </div>
+      <div class="ai-demo__body">
+        <div class="ai-panel" data-panel="flow" role="tabpanel">
+          <div class="flow-step"><span class="flow-step__n">1</span> Cliente escolhe: <b>&nbsp;1) Vendas · 2) Suporte</b></div>
+          <div class="flow-step"><span class="flow-step__n">2</span> Bot pergunta e distribui para a fila certa</div>
+          <div class="flow-step"><span class="flow-step__n">3</span> Encaminha para um atendente disponível</div>
+          <p class="flow-note"><svg viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg> Ótimo para triagem. <b style="color:var(--text)">&nbsp;Comece pelo fluxo e ative a IA quando quiser</b> — mesmo painel, sem migração.</p>
+        </div>
+        <div class="ai-panel is-active" data-panel="ai" role="tabpanel">
+          <div class="mini-chat">
+            <div class="bubble bubble--in">Oi, vocês parcelam a limpeza de pele? E tem horário essa semana?</div>
+            <div class="bubble bubble--out">Oi! 😊 Parcelamos em até 3x sem juros. Tenho <b>quinta 10h</b> ou <b>sexta 15h</b>. Qual fica melhor?</div>
+            <div class="bubble bubble--in">Sexta 15h 👍</div>
+            <div class="bubble bubble--out">Fechado! ✅ Agendei sua limpeza de pele para <b>sexta, 15h</b>. Já te enviei a confirmação. Precisa de mais algo?</div>
+          </div>
+          <p class="flow-note"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> A IA entendeu, informou o parcelamento e <b style="color:var(--text)">&nbsp;agendou sozinha</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HUMANO + IA ===================== -->
+<section class="section section--cream2">
+  <div class="container">
+    <div class="human__card" data-reveal>
+      <span class="waves" aria-hidden="true"></span>
+      <div class="human__stat">
+        <div class="big">73%</div>
+        <p>dos brasileiros não se importam de falar com IA — desde que o problema seja resolvido.</p>
+      </div>
+      <div>
+        <span class="pill">Humano + IA</span>
+        <h3 class="h3" style="margin:1rem 0 0.7rem">IA que sabe a hora de chamar uma pessoa.</h3>
+        <p style="color:#26302a;font-weight:500;margin-bottom:1.4rem">A IA resolve o simples na hora e passa o bastão no momento certo — com todo o contexto da conversa. Ninguém repete a mesma coisa três vezes.</p>
+        <div class="handoff">
+          <div class="handoff__row"><span class="who who--ai">IA</span> Qualifica, responde e resolve 73% sozinha</div>
+          <div class="handoff__row"><span class="who who--ai">IA</span> Detecta "quero fechar" ou caso sensível</div>
+          <div class="handoff__row"><span class="who who--human">Humano</span> Humano recebe o cliente quente já com o contexto</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CANAIS ===================== -->
+<section class="section section--cream2" id="canais">
+  <div class="container ai__inner">
+    <div>
+      <span class="eyebrow" data-reveal>Uma só caixa de entrada</span>
+      <h2 class="h2" data-reveal data-reveal-delay="1" style="margin:0.9rem 0 1rem">Chega de pular entre apps.</h2>
+      <p class="lead" data-reveal data-reveal-delay="2">A IA e o seu time atendem no mesmo número, com tudo caindo na mesma caixa. WhatsApp, Instagram, Telegram, Messenger, WebChat — e até a telefonia.</p>
+      <div class="chan-list mt-2" data-reveal data-reveal-delay="2">
+        <span class="chan-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.3A9 9 0 1012 3z" stroke="var(--wa)" stroke-width="1.6"/></svg> WhatsApp</span>
+        <span class="chan-chip"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#e1306c" stroke-width="1.7"/><circle cx="12" cy="12" r="3.5" stroke="#e1306c" stroke-width="1.7"/></svg> Instagram</span>
+        <span class="chan-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M21 5L3 11l5 2 2 6 3-4 5 4 3-14z" stroke="#29a9eb" stroke-width="1.6" stroke-linejoin="round"/></svg> Telegram</span>
+        <span class="chan-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 4V5z" stroke="#0088ff" stroke-width="1.6" stroke-linejoin="round"/></svg> Messenger</span>
+        <span class="chan-chip"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M9 9h6M9 13h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> WebChat</span>
+        <span class="chan-chip is-star"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2 1a11 11 0 005 5l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Telefonia / PABX</span>
+      </div>
+    </div>
+    <div class="inbox" data-reveal data-reveal-delay="1">
+      <div class="inbox__bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="title">caixa unificada</span><span class="live">ao vivo</span></div>
+      <div class="conv"><span class="conv__chan"><span class="conv__ava" style="background:#6624ff">MR</span><span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.3A9 9 0 1012 3z" stroke="var(--wa)" stroke-width="2"/></svg></span></span><div class="conv__main"><div class="n">Marina Rocha <span class="tag-ai">IA respondendo</span></div><div class="p">Perfeito, pode agendar pra quinta 🙌</div></div><div class="conv__meta"><div class="time">agora</div></div></div>
+      <div class="conv"><span class="conv__chan"><span class="conv__ava" style="background:#e1306c">JP</span><span class="badge"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#e1306c" stroke-width="2"/></svg></span></span><div class="conv__main"><div class="n">João Paulo <span class="tag-ai">qualificando</span></div><div class="p">Vi o anúncio, ainda tem vaga?</div></div><div class="conv__meta"><div class="time">1 min</div></div></div>
+      <div class="conv"><span class="conv__chan"><span class="conv__ava" style="background:#16c079">RS</span><span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M21 5L3 11l5 2 2 6 3-4 5 4 3-14z" stroke="#29a9eb" stroke-width="2" stroke-linejoin="round"/></svg></span></span><div class="conv__main"><div class="n">Rafael Souza <span class="tag-ai">passou pro humano</span></div><div class="p">Quero fechar o plano anual</div></div><div class="conv__meta"><div class="time">8 min</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAINEL DO GESTOR ===================== -->
+<section class="section">
+  <div class="container manager__inner">
+    <div class="dash" data-reveal>
+      <div class="dash__kpis">
+        <div class="kpi"><div class="l">Resp. média</div><div class="v">47s</div><div class="d up">▲ 6× mais rápido</div></div>
+        <div class="kpi"><div class="l">Conversão</div><div class="v">31%</div><div class="d up">▲ 9 pts</div></div>
+        <div class="kpi"><div class="l">Sem resposta</div><div class="v">0</div><div class="d up">▲ zerado</div></div>
+      </div>
+      <div class="chart">
+        <div class="chart__head"><span class="t">Atendimentos por dia</span><span class="s">últimos 7 dias</span></div>
+        <div class="bars" id="bars">
+          <div class="bar" style="--h:45%"><span>seg</span></div><div class="bar" style="--h:60%"><span>ter</span></div><div class="bar" style="--h:52%"><span>qua</span></div><div class="bar" style="--h:70%"><span>qui</span></div><div class="bar" style="--h:64%"><span>sex</span></div><div class="bar" style="--h:82%"><span>sab</span></div><div class="bar" style="--h:96%"><span>dom</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow" data-reveal>Para quem paga a conta</span>
+      <h2 class="h2" data-reveal data-reveal-delay="1" style="margin:0.9rem 0 1rem">Pare de pedir relatório por planilha.</h2>
+      <p class="lead" data-reveal data-reveal-delay="2">Você vê em tempo real quanto lead entrou, quanto virou venda, o tempo de resposta, a produtividade por atendente e o que a IA resolveu sozinha — sem cobrar ninguém no fim do mês.</p>
+      <div class="btn-row mt-2" data-reveal data-reveal-delay="2"><a href="precos.html" class="btn btn--primary">Quero ver na prática</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="section cta-final">
+  <span class="waves" aria-hidden="true"></span>
+  <div class="container cta-final__inner" data-reveal>
+    <h2>Coloque um vendedor de IA no seu WhatsApp hoje.</h2>
+    <p>Ele responde na hora, qualifica sozinho, agenda e chama uma pessoa só quando precisa. Você acompanha tudo pelo painel.</p>
+    <div class="btn-row"><a href="precos.html" class="btn btn--primary btn--lg">Testar grátis 7 dias</a><a href="contato.html" class="btn btn--dark btn--lg">Falar com especialista</a></div>
+    <div class="reassure"><span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Sem cartão</span><span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Setup em minutos</span><span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Sem fidelidade</span></div>
+  </div>
+</section>
+
+</main>
+<div id="footer-root"></div>
+<div class="sticky-cta" id="stickyCta"><a href="#" class="btn btn--wa">Falar no WhatsApp</a><a href="precos.html" class="btn btn--primary">Testar grátis</a></div>
+<script src="script.js"></script>
+</body>
+</html>
