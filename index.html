@@ -9,9 +9,7 @@
 <meta property="og:title" content="NexChat — Agente de IA para o seu WhatsApp">
 <meta property="og:description" content="Nunca mais perca um lead por demora. Agente de IA que atende, qualifica e agenda 24/7.">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/exo2-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23fdf6e9'/%3E%3Cpath d='M7 7l6 9-6 9M25 7l-6 9 6 9' stroke='%236624ff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
 </head>
@@ -128,12 +126,36 @@
     <div class="section-head center-head text-center" data-reveal>
       <span class="eyebrow" style="justify-content:center">Para qualquer mercado</span>
       <h2 class="h2">Seja qual for o seu negócio, a IA aprende a <span class="mark">sua operação</span>.</h2>
-      <p class="lead">Você sobe suas informações e o agente se molda à realidade da sua empresa — do consultório à concessionária.</p>
+      <p class="lead">Escolha um tipo de empresa e veja o agente atendendo <b>de verdade, em tempo real</b> — do consultório à concessionária, a IA se molda à sua operação.</p>
     </div>
-    <div class="chan-list" data-reveal style="justify-content:center;max-width:860px;margin:0 auto 2rem">
-      <span class="chan-chip">Clínicas &amp; Saúde</span><span class="chan-chip">Imobiliárias</span><span class="chan-chip">Empresas em geral</span><span class="chan-chip">Construtora</span><span class="chan-chip">Indústria</span><span class="chan-chip">Varejo</span><span class="chan-chip">Concessionárias</span><span class="chan-chip">E-commerce</span><span class="chan-chip is-star">+ o seu segmento</span>
+    <div class="seg" data-reveal>
+      <div class="seg__tabs" id="segTabs" role="tablist" aria-label="Escolha o tipo de empresa"></div>
+      <div class="seg__stage">
+        <div class="seg__phone">
+          <div class="phone">
+            <span class="phone__notch" aria-hidden="true"></span>
+            <div class="phone__screen">
+              <div class="chat__top">
+                <span class="chat__avatar" id="segAvatar" aria-hidden="true"></span>
+                <span class="chat__peer"><strong id="segName">—</strong><span>agente de IA online</span></span>
+              </div>
+              <div class="chat__body" id="segChat" role="img" aria-label="Demonstração da IA conversando em tempo real"></div>
+              <div class="chat__result" id="segResult" hidden>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span id="segResultText">Resolvido pela IA</span><span class="t" id="segResultTime">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="seg__info">
+          <span class="pill" id="segTag">Ao vivo · a mesma IA, moldada ao seu negócio</span>
+          <h2 id="segTitle">—</h2>
+          <p id="segDesc">—</p>
+          <ul class="check-list" id="segList"></ul>
+          <a href="para-quem.html" class="btn btn--primary">Ver todos os segmentos →</a>
+        </div>
+      </div>
     </div>
-    <div class="text-center" data-reveal><a href="para-quem.html" class="btn btn--primary">Ver a IA atendendo no seu segmento →</a></div>
   </div>
 </section>
 
