@@ -20,6 +20,7 @@
     { key: "ia", label: "Agente de IA", href: "agente-ia.html" },
     { key: "para-quem", label: "Para quem", href: "para-quem.html" },
     { key: "precos", label: "Preços", href: "precos.html" },
+    { key: "blog", label: "Blog", href: "blog.html" },
     { key: "sobre", label: "Sobre", href: "sobre.html" }
   ];
   var current = document.body.getAttribute("data-page") || "home";
@@ -55,7 +56,11 @@
           "<p>A plataforma de atendimento com agente de IA para empresas que vendem pelo WhatsApp.</p>" +
           '<div class="footer__addr"><span>Chapecó · Santa Catarina · Brasil</span>' +
           '<a href="contato.html">Fale com a gente</a>' +
-          '<a href="mailto:contato@nexxchat.com.br">contato@nexxchat.com.br</a></div></div>' +
+          '<a href="mailto:contato@nexxchat.com.br">contato@nexxchat.com.br</a></div>' +
+          '<div class="footer__social">' +
+            '<a class="footer__soc footer__soc--wa" href="https://wa.me/554933402091?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20NexChat%20e%20quero%20colocar%20a%20IA%20para%20vender%20no%20meu%20WhatsApp." target="_blank" rel="noopener" aria-label="Falar no WhatsApp da NexChat"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.06-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.15l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1112 20.2z"/></svg></a>' +
+            '<a class="footer__soc footer__soc--ig" href="https://www.instagram.com/nexchat_sgi/" target="_blank" rel="noopener" aria-label="Instagram da NexChat"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>' +
+          '</div></div>' +
         '<div class="footer__col"><h3>Produto</h3><ul>' +
           '<li><a href="agente-ia.html">Agente de IA</a></li>' +
           '<li><a href="agente-ia.html#canais">Canais</a></li>' +
@@ -68,6 +73,7 @@
           '<li><a href="para-quem.html">Varejo &amp; Serviços</a></li></ul></div>' +
         '<div class="footer__col"><h3>Empresa</h3><ul>' +
           '<li><a href="sobre.html">Sobre</a></li>' +
+          '<li><a href="blog.html">Blog</a></li>' +
           '<li><a href="contato.html">Contato</a></li>' +
           '<li><a href="precos.html#faq">Dúvidas</a></li>' +
           '<li><a href="https://wiki.nexxchat.com.br" target="_blank" rel="noopener">Central de ajuda</a></li></ul></div>' +
@@ -250,6 +256,62 @@
     };
     [rLeads, rTicket, rConv, rLost].forEach(function (el) { el.addEventListener("input", calc); });
     calc();
+  }
+
+  /* ---------- Marquee (faixa de clientes) ---------- */
+  var mqTrack = $(".marquee__track");
+  if (mqTrack && !reduce) {
+    Array.prototype.slice.call(mqTrack.children).forEach(function (el) {
+      var clone = el.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      mqTrack.appendChild(clone);
+    });
+  }
+
+  /* ---------- Depoimentos em vídeo (lightbox) ---------- */
+  var vCards = $$(".vtesti");
+  if (vCards.length) {
+    var vmodal = document.createElement("div");
+    vmodal.className = "vmodal";
+    vmodal.setAttribute("role", "dialog");
+    vmodal.setAttribute("aria-modal", "true");
+    vmodal.setAttribute("aria-label", "Depoimento em vídeo");
+    vmodal.innerHTML =
+      '<button class="vmodal__close" type="button" aria-label="Fechar vídeo">&times;</button>' +
+      '<div class="vmodal__box"><div class="vmodal__frame" id="vmodalFrame"></div></div>';
+    document.body.appendChild(vmodal);
+    var vFrame = vmodal.querySelector("#vmodalFrame");
+    var vClose = vmodal.querySelector(".vmodal__close");
+    var lastFocus = null;
+    var bgRegions = ["#nav-root", "main", "#footer-root", "#stickyCta"]
+      .map(function (s) { return $(s); }).filter(Boolean);
+    var setBgInert = function (on) { bgRegions.forEach(function (el) { el.inert = on; }); };
+    var openVideo = function (yt) {
+      if (yt) {
+        vFrame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(yt) +
+          '?autoplay=1&rel=0" title="Depoimento em vídeo" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      } else {
+        vFrame.innerHTML = '<div class="vmodal__ph"><div><strong style="font-size:1.15rem">🎬 Vídeo em breve</strong><br><br>' +
+          '<span style="color:var(--on-dark-soft)">Depoimento em produção. Para publicar, cole o ID do YouTube no atributo <code>data-yt</code> do card.</span></div></div>';
+      }
+      setBgInert(true);
+      vmodal.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      vClose.focus();
+    };
+    var closeVideo = function () {
+      vmodal.classList.remove("is-open");
+      vFrame.innerHTML = "";
+      document.body.style.overflow = "";
+      setBgInert(false);
+      if (lastFocus) lastFocus.focus();
+    };
+    vCards.forEach(function (card) {
+      card.addEventListener("click", function () { lastFocus = card; openVideo(card.getAttribute("data-yt")); });
+    });
+    vClose.addEventListener("click", closeVideo);
+    vmodal.addEventListener("click", function (e) { if (e.target === vmodal) closeVideo(); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape" && vmodal.classList.contains("is-open")) closeVideo(); });
   }
 
   /* ---------- Sticky CTA mobile ---------- */
